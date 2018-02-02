@@ -1,0 +1,43 @@
+<form name="searchCard.searchForm"
+      ng-submit="searchCard.search()">
+
+    <md-card>
+
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline"
+                      md-colors="{color:'primary'}">
+                    Page search
+                </span>
+            </md-card-title-text>
+        </md-card-title>
+
+        <md-card-content layout="column">
+
+            <md-input-container>
+                <label>Search</label>
+                <input ng-model="searchCard.searchText"
+                       type="search" />
+            </md-input-container>
+
+        </md-card-content>
+
+        <md-card-actions layout="row"
+                         layout-align="end center">
+
+            <md-button ng-click="searchCard.clear()"
+                       aria-label="Reset">
+                Reset
+            </md-button>
+
+            <md-button type="submit"
+                       aria-label="Search"
+                       ng-disabled="searchCard.searchForm.$invalid">
+                Search
+            </md-button>
+
+        </md-card-actions>
+
+    </md-card>
+
+</form>

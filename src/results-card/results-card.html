@@ -1,0 +1,47 @@
+<md-card>
+
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline"
+                  md-colors="{color:'primary'}">
+                Search results
+            </span>
+        </md-card-title-text>
+    </md-card-title>
+
+    <md-card-content layout="column">
+
+        <md-list flex>
+
+            <md-list-item ng-if="!resultsCard.results.length">
+                <h3>
+                    No results found.
+                </h3>
+            </md-list-item>
+
+            <md-list-item ng-repeat="result in resultsCard.results"
+                          ng-href="{{result.location}}"
+                          target="_blank"
+                          class="md-2-line">
+
+                <md-icon md-font-library="material-icons">
+                    web
+                </md-icon>
+
+                <div class="md-list-item-text"
+                     layout="column">
+
+                    <h3 ng-bind="result.title">
+                    </h3>
+
+                    <p ng-bind="result.location">
+                    </p>
+
+                </div>
+
+            </md-list-item>
+        </md-list>
+
+    </md-card-content>
+
+</md-card>

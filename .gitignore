@@ -1,0 +1,13 @@
+# ignore generated dist files
+dist/
+
+# ignore generated test and coverage files
+test/
+
+# ignore IntelliJ files
+.idea
+*.iml
+*.ipr
+
+# ignore node_modules pulled down by npm
+node_modules/
